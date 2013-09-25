@@ -1,5 +1,5 @@
 /* global sharing */
-var tagCounts = _.chain(tags).countBy(function(el) { return el; }).pairs().sortBy(function(el) { return -el[1]; }).value();
+var tagCounts = _.chain(tags).countBy(function(el) { return el.toLowerCase(); }).pairs().sortBy(function(el) { return -el[1]; }).value();
 
 Array.prototype.pick = function() {
   return this[Math.floor(Math.random()*this.length)];
